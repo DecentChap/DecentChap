@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @DecentChap
 - 👀 I’m interested in Trading algorithms
 - 🌱 I’m currently learning business informatics
-- 💞️ I’m looking to collaborate on some decent projekt
+- 💞️ I’m looking to collaborate on some decent project
 - 📫 How to reach me: xxxbenixxx2@gmail.com
 
 <!---
