@@ -8,19 +8,19 @@ class DeckofCards():
     
     def draw_card(self,no_cards_todraw):
         your_cards = {}
-        for _ in range(no_cards_todraw):
+        i = 0
+        while i < no_cards_todraw:
             random_symbol = random.choice(self.symbol)
             random_card = random.choice(self.cards[random_symbol])
             if random_symbol in your_cards:
-                if random_card in your_cards[random_symbol]:
-                    _-=1
-                    continue
-                else: your_cards[random_symbol].append(random_card)
-            else: your_cards[random_symbol] = [random_card]
+                if random_card not in your_cards[random_symbol]:
+                    your_cards[random_symbol].append(random_card)
+                    i+=1
+            else: 
+                your_cards[random_symbol] = [random_card]
+                i+=1
         return your_cards
-
-    
-
+ 
 no_of_cards = [x for x in range(1,14)]
 french_symbols = ["spade","heart","diamond","club"]
 french_deck = DeckofCards(13,french_symbols,{x:no_of_cards for x in french_symbols})
@@ -30,6 +30,8 @@ my_cards = french_deck.draw_card(card_draws)
 
 print(f"Your cards are: {my_cards}")
 input()
+
+
 
 
 
